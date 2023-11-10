@@ -9,3 +9,16 @@ body {
       
 }
 
+.image {
+  width: 67px;
+  height: 75px;
+}
+
+.image .logo-mnd-removebg {
+  position: fixed;
+  width: 67px;
+  height: 75px;
+  top: 1;
+  right: 91%;
+  object-fit: cover;
+}
