@@ -19,79 +19,87 @@
     <title>Ministério Navegadores de Deus</title>
   </head>
 
-  <body>
-    <nav class="navbar col-12 m-auto" style="background-color: #161616;">
-      <a class="navbar-brand" href="#">
-          <div class="image"><img class="logo-mnd-removebg" src="local/logo-mnd-removebg.svg" /></div> </a>
-      <div class="d-flex justify-content-start align-items-center w-auto">
-          <ul class="nav">
-              <li class="nav-item">
-                  <a class="nav-link disabled" href="#">Agenda</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link disabled" href="#">Projetos</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link disabled" href="#">Rádio</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link disabled" href="#">Galeria</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link disabled" href="#">Contato</a>
-              </li>
+  <!---Navbar------------------------------->
+  <body class="pt-5">
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+          <img src="local/logo-mnd-removebg.svg" alt="Logo" height="50" width="50">
+        </a>
+    
+        <!-- Botão de alternância para dispositivos móveis -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <!-- Itens de navegação -->
+        <div class="collapse navbar-collapse " id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Agenda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Projetos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Rádio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Galeria</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contato</a>
+            </li>
+            <button type="button" class="btn btn-warning">Inscreva-se</button>
           </ul>
-          <button type="button" class="btn btn-warning">Inscreva-se</button>
+        </div>
       </div>
-  </nav>
-  
-      
+    </nav>
 
     <!--Seção Mistério-->
-    <section id="Ministério" class="mt-5">
-        <div class="m-auto col-11">
+    <section id="Ministério">
+        <div class="container mt-5 pt-4">
             <div class="row">
-                <div class="col-md-6">
-                  <br>
-                  <br>
+                <div class="col-sm-8 mt-4">
                     <h1 class="font-weight-bold mb-3">Ministério <br> Navegadores de Deus<span style="color: #FDA923;">.</span></h1>
-                    <h4 class="text-secondary fs-5 fw-medium mb-4 text-justify">Através dos cultos físicos e das mídias digitais levamos pessoas ao conhecimento de Deus, visando sempre a mensagem da Cruz e de Jesus Cristo.</h4>
-                    <button type="button" class="btn btn-primary">Saiba Mais</button>
+                    <h5 class="text-secondary mb-4 text-justify" style="width: 75%">Através dos cultos físicos e das mídias digitais levamos pessoas ao conhecimento de Deus, visando sempre a mensagem da Cruz e de Jesus Cristo.</h6>
+                    <button type="button" class="btn btn-primary mb-5">Saiba Mais</button>
                 </div>
-                <div class="col-md-4 ml-auto">
-                    <img src="local/cards/biblia.png" class="rounded float-right mb-3" alt="...">
-                    <h6 class="m-0 text-float py-2 px-2 mb-4 text-justify text-secondary text-justify">Pois vocês são salvos pela graça, por meio da fé, e isto não vem de vocês, é dom de Deus; não por obras, para que ninguém se glorie.<br><span class="text-secondary fs-6 fw-medium font-family-Poppins">Efésios 2:8-9</span></h6>
-                </div> 
-            </div>
+
+                <div class="col-sm-4" style="width: 50%;">
+                  <img class="img-fluid " src="local/cards/biblia.png " alt="biblia" style="width: 100%;">
+                  <h6 class=" pt-2 pb-4 text-justify"><span class="text-secondary fs-6 fw-medium">Pois vocês são salvos pela graça, por meio da fé, e isto não vem de vocês, é dom de Deus; não por obras, para que ninguém se glorie.</span><br><span class="text-secondary fs-6 fw-medium">Efésios 2:8-9</span></h6>
+                <div>
+            </div>    
         </div>
     </section>
-    
+
     <!---Seção Cultos-->
-    <section id="cultos"  style="background-color: #D9D9D9;">
-      <div class="m-auto col-11">
+    <section id="cultos"style="background-color: #D9D9D9;">
+      <div class="container m-auto">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-sm-6">
             <div class="embed-responsive embed-responsive-16by9 mt-5 mb-5" style="width:90%;">
               <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ABzDOSQkhTM"></iframe>
-            </div>
-          </div> 
+            </div> 
+          </div>
 
-            <div class="col-md-6 ml-auto">
-              <br>
-              <br>
-              <br>
-              <br>
-                <h1 class="card-title font-weight-bold mb-3">Acompanhe nossos cultos<span style="color: #FDA923;">!</span></h1>
-                <p class="text-justify">O nosso culto ocorre todos os Domingos das 9:00 às 10:30 presencialmente em nossa igreja, localizada  na Rua Ruy Barbosa no bairro Quintas do Picuaia, Lauro de Freitas - BA, MAS para todos aqueles adoradores de Deus que não puderem estar presentes nesse dia, também disponibilizamos uma gravação do culto em nosso canal do Youtube.Além disso, todas às quartas das 20:00 às 21:30 temos cultos no Youtube para que você acompanhe ao vivo ou quando quiser.</p>
+          <div class="col-sm-6 mt-5">
+            <div>
+              <h1 class="font-weight-bold mb-3">Acompanhe nossos cultos<span style="color: #FDA923;">!</span></h1>
+              <p class=" py-2 text-justify">O nosso culto ocorre todos os Domingos das 9:00 às 10:30 presencialmente em nossa igreja, localizada  na Rua Ruy Barbosa no bairro Quintas do Picuaia, Lauro de Freitas - BA, MAS para todos aqueles adoradores de Deus que não puderem estar presentes nesse dia, também disponibilizamos uma gravação do culto em nosso canal do Youtube. Além disso, todas às quartas das 20:00 às 21:30 temos cultos no Youtube para que você acompanhe ao vivo ou quando quiser.</p>
             </div>
-  
-        </div>
+          </div>
+        </div>    
       </div>
     </section>
 
      <!---Seção Agenda-->
      <section id="Agenda">
-
+      <div id="background-img">
+            <h1 class="text-center text-light fs-1 fw-semibold font-family-Roboto  m-0 px-3 py-2">Agenda da Semana</h1>
+      </div>
      </section>
 
       <!---Seção Rádio-->

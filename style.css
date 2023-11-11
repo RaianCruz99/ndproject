@@ -9,16 +9,37 @@ body {
       
 }
 
-.image {
-  width: 67px;
-  height: 75px;
+@include media-breakpoint-up(sm) {
+  html {
+    font-size: 1.2rem;
+  }
 }
 
-.image .logo-mnd-removebg {
-  position: fixed;
-  width: 67px;
-  height: 75px;
-  top: 1;
-  right: 91%;
-  object-fit: cover;
+@include media-breakpoint-up(md) {
+  html {
+    font-size: 1.4rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: 1.6rem;
+  }
+}
+
+#background-img{
+  background-image: url(local/galeria/pordosol-bg.png);
+  max-width: 100%;
+}
+
+#navbar {
+  background-color: #161616; /* Cor de fundo da barra de navegação */
+}
+
+.navbar-brand {
+  margin-right: auto; /* Coloca a logo à direita */
+}
+
+.navbar-nav .nav-item {
+  margin-right: 10px; /* Espaçamento entre os itens de navegação */
 }
