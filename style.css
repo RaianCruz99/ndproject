@@ -25,14 +25,12 @@ body {
   html {
     font-size: 1.2rem;
   }
-
 }
 
 @include media-breakpoint-up(md) {
   html {
     font-size: 1.4rem;
   }
-
 }
 
 @include media-breakpoint-up(lg) {
