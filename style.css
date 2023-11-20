@@ -2,6 +2,18 @@ h1 {
     font-family: 'Roboto', sans-serif;
   }
 
+  p{
+    font-family: 'Poppins', sans-serif ;
+  }
+
+  a{
+    font-family: 'Poppins', sans-serif ;
+  }
+
+  button{
+    font-family: 'Poppins', sans-serif;
+  }
+  
 
 body {
     background-color: #E9E9E9;
@@ -44,27 +56,33 @@ body {
   margin-right: 10px; /* Espaçamento entre os itens de navegação */
 }
 
+.apresentacao{
+  width: 80%;
+}
+
+.video{
+  width: 90% ;
+}
+
 .galery a {
   position: relative;
-  }
+}
 
 .galery a img {
   transition: transform 0.5s, opacity 0.5s;
 }
 
 .galery a .hover-text {
-  background-color: rgba(44, 44, 44, 0.493);
-  color: rgb(255, 255, 255);
-  font-size: 28px;
+  background-color: rgba(0, 0, 0, 0.589);
+  color: #fff;
+  font-size: 18px;
   opacity: 0;
-  font-family: Poppins;
   transition: transform 0.5s, opacity 0.7s;
 }
 
 .galery a:hover img {
   transform: rotateY(180deg);
-  opacity: 0.7;
-  filter: brightness(70%);
+  opacity: 0;
 }
 
 .galery a:hover .hover-text {
@@ -73,12 +91,88 @@ body {
 }
 
 .image-caption{
-  color: #FFF;
-  font-family: Roboto;
-  font-size: 25px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  margin-bottom: 7px;
-  padding: 7px;
+  color:#E9E9E9;
+  font-weight: 600;
 }
+
+.ml-n1 {
+  margin-left: -1rem !important;
+}
+
+.ml-6 {
+  margin-left: 6rem !important;
+}
+
+.ml-n10 {
+  margin-left: -10rem !important;
+}
+
+.mt-6 {
+  margin-top: 3.5rem !important;
+}
+
+.mt-7 {
+  margin-top: 7rem !important;
+}
+
+.mt-n7 {
+  margin-top: -7rem !important;
+}
+
+.mt-n3 {
+  margin-top: -3rem !important;
+}
+
+.mt-n5 {
+  margin-top: -5rem !important;
+}
+
+.mb-10 {
+  margin-top: 10rem !important;
+} 
+
+.container{
+  width: 100%;
+}
+
+.duracao{
+  width: 250px;
+
+}
+
+.barra{
+  width: 250px;
+  height: 10px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  display: flex;
+}
+
+progress {
+  height: 8.5px;
+  width: 100%;
+}
+
+@media (max-width: 460px) {
+
+  .video{
+    width: 100%;
+  }
+
+  .apresentacao{
+    width: 100%;
+  }
+
+  .logo{
+    width: 100%;
+  }
+
+  .duracao{
+    width: 100%;
+  }
+
+  .hide-on-small-screen {
+    display: none !important;
+  }
+}
+
