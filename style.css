@@ -21,6 +21,10 @@ body {
       
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 @include media-breakpoint-up(sm) {
   html {
     font-size: 1.2rem;
@@ -265,6 +269,22 @@ progress {
 
   .hide-on-small-screen {
     display: none !important;
+  }
+
+  .colunas{
+    margin-left: 3rem !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .colunas{
+    margin-left: 3rem !important;
+  }
+}
+
+@media (max-width: 770px) {
+  .colunas{
+    margin-left: 7rem;
   }
 }
 
