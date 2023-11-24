@@ -1,4 +1,4 @@
-h1 {
+h1, h3  {
     font-family: 'Roboto', sans-serif;
   }
 
@@ -56,6 +56,66 @@ body {
   margin-right: 10px; /* Espaçamento entre os itens de navegação */
 }
 
+.modal {
+  display: none;
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+/* Modal Content/Box */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: 15% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; 
+  height: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.imagem-com-texto {
+  position: relative;
+  max-width: 100%;
+}
+
+.retangulos{
+  width: 81px;
+  height: 104px;
+}
+
+.modaltitulo {
+  position: absolute;
+  transform: translateX(0%);
+  z-index: 2;
+  margin-top: -6.5%;
+  margin-left: 2%;
+  color: #161616; 
+  font-weight: bolder;
+  font-size: 48px; 
+}
+
 .apresentacao{
   width: 80%;
 }
@@ -64,39 +124,59 @@ body {
   width: 90% ;
 }
 
-.galery a {
+
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; 
+}
+
+
+.flip-card-inner {
   position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
 }
 
-.galery a img {
-  transition: transform 0.5s, opacity 0.5s;
-}
 
-.galery a .hover-text {
-  background-color: rgba(0, 0, 0, 0.589);
-  color: #fff;
-  font-size: 18px;
-  opacity: 0;
-  transition: transform 0.5s, opacity 0.7s;
-}
-
-.galery a:hover img {
+.flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
-  opacity: 0;
 }
 
-.galery a:hover .hover-text {
-  transform: rotateY(180deg) scaleX(-1);
-  opacity: 1;
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; 
+  backface-visibility: hidden;
 }
 
-.image-caption{
-  color:#E9E9E9;
-  font-weight: 600;
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
 }
 
-.ml-n1 {
-  margin-left: -1rem !important;
+/* Style the back side */
+.flip-card-back {
+  background-color: #FEF2E0;
+  color: #656565;
+  transform: rotateY(180deg);
+}
+
+.texto-card{
+  transform: translateX(-11%);
+  z-index: 2;
+  margin-top: -10%;
+  color: #ffffff; 
+  font-weight: bolder;
 }
 
 .ml-6 {
@@ -115,6 +195,10 @@ body {
   margin-top: 7rem !important;
 }
 
+.mt-8 {
+  margin-top: 8.3rem !important;
+}
+
 .mt-n7 {
   margin-top: -7rem !important;
 }
@@ -127,9 +211,17 @@ body {
   margin-top: -5rem !important;
 }
 
-.mb-10 {
+.mt-10 {
   margin-top: 10rem !important;
 } 
+
+.mb-6{
+  margin-bottom: 8rem !important;
+}
+
+.mr-7{
+margin-right: 7rem;
+}
 
 .container{
   width: 100%;
@@ -175,4 +267,51 @@ progress {
     display: none !important;
   }
 }
+
+* {box-sizing: border-box}
+
+.cont{
+  width: 90%;
+  height: 100%;
+}
+
+input[type=text], input[type=tel] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=tel]:focus {
+  background-color: #ddd;
+  border-color: #FACE32;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit/register button */
+.registerbtn {
+  
+  background-color: #FAAA32;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 27%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity:1;
+}
+
 
