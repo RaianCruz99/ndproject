@@ -1,45 +1,25 @@
-h1, h3  {
-    font-family: 'Roboto', sans-serif;
-  }
+h1,h3 {
+  font-family: "Roboto", sans-serif;
+}
 
-  p{
-    font-family: 'Poppins', sans-serif ;
-  }
+p {
+  font-family: "Poppins", sans-serif;
+}
 
-  a{
-    font-family: 'Poppins', sans-serif ;
-  }
+a {
+  font-family: "Poppins", sans-serif;
+}
 
-  button{
-    font-family: 'Poppins', sans-serif;
-  }
-  
+button {
+  font-family: "Poppins", sans-serif;
+}
 
 body {
-    background-color: #E9E9E9;
-    font-family: 'Poppins', sans-serif;
-      
+  background-color: #e9e9e9;
+  font-family: "Poppins", sans-serif;
 }
 
-@include media-breakpoint-up(sm) {
-  html {
-    font-size: 1.2rem;
-  }
-}
-
-@include media-breakpoint-up(md) {
-  html {
-    font-size: 1.4rem;
-  }
-}
-
-@include media-breakpoint-up(lg) {
-  html {
-    font-size: 1.6rem;
-  }
-}
-
-#background-img{
+#background-img {
   background-image: url(local/galeria/pordosol-bg.png);
   max-width: 100%;
 }
@@ -58,25 +38,25 @@ body {
 
 .modal {
   display: none;
-  position: fixed; 
-  z-index: 1; 
+  position: fixed;
+  z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: auto; 
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0,0.4); 
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 /* Modal Content/Box */
 .modal-content {
   position: relative;
   background-color: #fefefe;
-  margin: 15% auto; 
+  margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%; 
+  width: 80%;
   height: 80%;
 }
 
@@ -100,7 +80,7 @@ body {
   max-width: 100%;
 }
 
-.retangulos{
+.retangulos {
   width: 81px;
   height: 104px;
 }
@@ -111,72 +91,17 @@ body {
   z-index: 2;
   margin-top: -6.5%;
   margin-left: 2%;
-  color: #161616; 
+  color: #161616;
   font-weight: bolder;
-  font-size: 48px; 
+  font-size: 48px;
 }
 
-.apresentacao{
+.apresentacao {
   width: 80%;
 }
 
-.video{
-  width: 90% ;
-}
-
-
-
-.flip-card {
-  background-color: transparent;
-  width: 300px;
-  height: 200px;
-  border: 1px solid #f1f1f1;
-  perspective: 1000px; 
-}
-
-
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-/* Position the front and back side */
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden; 
-  backface-visibility: hidden;
-}
-
-
-.flip-card-front {
-  background-color: #bbb;
-  color: black;
-}
-
-/* Style the back side */
-.flip-card-back {
-  background-color: #FEF2E0;
-  color: #656565;
-  transform: rotateY(180deg);
-}
-
-.texto-card{
-  transform: translateX(-11%);
-  z-index: 2;
-  margin-top: -10%;
-  color: #ffffff; 
-  font-weight: bolder;
+.video {
+  width: 90%;
 }
 
 .ml-6 {
@@ -213,26 +138,25 @@ body {
 
 .mt-10 {
   margin-top: 10rem !important;
-} 
+}
 
-.mb-6{
+.mb-6 {
   margin-bottom: 8rem !important;
 }
 
-.mr-7{
-margin-right: 7rem;
+.mr-7 {
+  margin-right: 7rem;
 }
 
-.container{
+.container {
   width: 100%;
 }
 
-.duracao{
+.duracao {
   width: 250px;
-
 }
 
-.barra{
+.barra {
   width: 250px;
   height: 10px;
   border: 1px solid #eee;
@@ -246,20 +170,19 @@ progress {
 }
 
 @media (max-width: 460px) {
-
-  .video{
+  .video {
     width: 100%;
   }
 
-  .apresentacao{
+  .apresentacao {
     width: 100%;
   }
 
-  .logo{
+  .logo {
     width: 100%;
   }
 
-  .duracao{
+  .duracao {
     width: 100%;
   }
 
@@ -268,25 +191,29 @@ progress {
   }
 }
 
-* {box-sizing: border-box}
+* {
+  box-sizing: border-box;
+}
 
-.cont{
+.cont {
   width: 90%;
   height: 100%;
 }
 
-input[type=text], input[type=tel] {
+input[type="text"],
+input[type="tel"] {
   width: 100%;
   padding: 15px;
-  margin: 5px 0 22px 0;
+  /*margin: 5px 0 22px 0; Essa parte estava alterando o botão do footer */
   display: inline-block;
   border: none;
   background: #f1f1f1;
 }
 
-input[type=text]:focus, input[type=tel]:focus {
+input[type="text"]:focus,
+input[type="tel"]:focus {
   background-color: #ddd;
-  border-color: #FACE32;
+  border-color: #face32;
   outline: none;
 }
 
@@ -298,8 +225,7 @@ hr {
 
 /* Set a style for the submit/register button */
 .registerbtn {
-  
-  background-color: #FAAA32;
+  background-color: #faaa32;
   color: white;
   padding: 16px 20px;
   margin: 8px 0;
@@ -311,7 +237,131 @@ hr {
 }
 
 .registerbtn:hover {
-  opacity:1;
+  opacity: 1;
+}
+
+.current-day {
+  background-color: #007bff;
+  color: #fff;
+}
+
+#calendar {
+  max-width: 1110px;
+  max-height: 450px;
+  background-color: #f5f5f4;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  table-layout: fixed;
 }
 
 
+#fc-button {
+  align-items: center;
+}
+
+#big-banner {
+  background-image: url(local/galeria/pordosol-bg.png);
+  background-size: 100%;
+}
+
+.fc-list-heading td {
+  color: white; /* Define a cor do texto para branco */
+}
+
+.list-item {
+  list-style: none; /* Remover a estilização padrão de lista */
+  display: flex; /* Exibir os itens em uma linha */
+  align-items: center; /* Alinhar verticalmente os itens ao centro */
+}
+
+.list-item::before {
+  content: "\2022"; /* Código do caractere de bolinha */
+  color: #ffc107; /* Cor da bolinha (amarelo no estilo do Bootstrap) */
+
+}
+
+/*teste card*/
+.card {
+  perspective: 150rem;
+  position: relative;
+  height: 20rem;
+  max-width: 320px;
+  width:300px;
+  margin: 2rem;
+  box-shadow: none;
+  background: none;
+  cursor:pointer;
+  
+}
+
+.card-side {
+  height: 20rem;
+  border-radius: 3px;
+  transition: all 0.8s ease;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding:2rem;
+  color: white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.card-side.back {
+  transform: rotateY(-180deg);
+  background-image:linear-gradient(to right top,#ffc107,#FF9900);
+}
+
+#card1 .card-side.front {
+  background-image: url(local/cards/celula.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#card2 .card-side.front {
+  background-image: url(local/cards/adoracao.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#card3 .card-side.front {
+  background-image: url(local/cards/estudos.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#card4 .card-side.front {
+  background-image: url(local/cards/jogos_online.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#card5 .card-side.front {
+  background-image: url(local/cards/esportes.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#card6 .card-side.front {
+  background-image: url(local/cards/eventos_diversos.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.card:hover .card-side.front {
+  transform: rotateY(180deg);
+}
+
+.card:hover .card-side.back {
+  transform: rotateY(0deg);
+}

@@ -1,298 +1,449 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <link rel="icon" type="image/svg" href="local/logo-mnd-removebg.svg" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"/>
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"/>
-    <link rel="stylesheet" href="style.css"/>
 
-    <title>Ministério Navegadores de Deus</title>
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="icon" type="image/svg" href="local/logo-mnd-removebg.svg" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <link rel="stylesheet" href="style.css">
+  <script src="agenda.js"></script>
+
+  <link rel="stylesheet" href="assets/vendor/libs/plyr/plyr.css" />
+  <script src="assets/vendor/libs/plyr/plyr.js"></script>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/locales/pt-br.js"></script>
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
+  <link href='https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.1/css/all.css' rel='stylesheet'>
   
-  <!---------------------------------Navbar--------------------------------->
-  <body class="pt-5">
-    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
-      <div class="container">
-        
-        <!-- Logo -->
-        <a class="navbar-brand" href="#">
-          <img src="local/logos/logo-mnd-removebg.svg" alt="Logo" height="50" width="50">
+
+  <title>Ministério Navegadores de Deus</title>
+</head>
+
+<body>
+  <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top shadow">
+    <div class="container">
+      <!-- Logo -->
+      <a class="navbar-brand" href="#">
+        <img src="local/logos/logo-mnd-removebg.svg" alt="Logo" height="50" width="50">
+      </a>
+
+      <!-- Botão de alternância para dispositivos móveis -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Itens de navegação -->
+      <div class="collapse navbar-collapse " id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item border-right ">
+            <a class="nav-link mr-2 " style="color: #E9E9E9; " href="#">Agenda</a>
+          </li>
+          <li class="nav-item border-right ">
+            <a class="nav-link mr-2 " style="color: #E9E9E9;" href="#">Projetos</a>
+          </li>
+          <li class="nav-item border-right">
+            <a class="nav-link mr-2 " style="color: #E9E9E9;" href="#">Rádio</a>
+          </li>
+          <li class="nav-item border-right">
+            <a class="nav-link  mr-2 " style="color: #E9E9E9;" href="#">Galeria</a>
+          </li>
+          <li class="nav-item border-right">
+            <a class="nav-link mr-2 " style="color: #E9E9E9;" href="#">Contato</a>
+          </li>
+          <button id="inscricao" style="font-weight: bolder;" type="button" class="btn btn-warning">INSCREVA-SE</button>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!---Seção Modal Inscreva-se-->
+  <!-- O Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+
+      <div class="caixainscricao d-flex flex-column flex-md-row bd-highlight">
+
+        <div class="info hi p-2 flex-fill bd-highlight">
+          <div class="imagem-com-texto">
+            <img class="retangulos" src="local/Icons/retangulos.svg" alt="">
+            <h1 class="modaltitulo font-weight-bold mt-n3">Ministério <br> Navegadores de Deus<span
+                style="color: #FDA923;">.</span></h1>
+          </div>
+
+          <div class="d-none d-md-block">
+            <h3 class="mt-8 ml-6 " style="color: #161616; font-weight: bold;">Localização</h3>
+            <p class="text-secondary mt-4 ml-6" style="color: #BEBEBE;">Rua Ruy Barbosa no Bairro Quintas do Picuaia,
+              <br>Lauro de Freitas -BA
+            </p>
+            <h3 class="mt-6 ml-6" style="color: #161616; font-weight: bold;">Siga-nos</h3>
+            <div class="mt-3 ml-6">
+              <img class="ml-3" src="local/Icons/vector.svg" alt="yotube">
+              <img class="ml-3" src="local/Icons/instagram.svg" alt="instagram">
+              <img class="ml-3" src="local/Icons/twitch.svg" alt="twitch">
+            </div>
+            <h6 class="mt-4 ml-6" style="font-size: 15px;">© 2023 Política de Privacidade</h6>
+          </div>
+        </div>
+
+        <div class="formulario p-2 flex-fill bd-highlight">
+          <form action="action_page.php">
+            <div class="cont mb-2">
+              <h1 class="mt-8" style=" font-weight: bold; color: #FDA923;">INSCRIÇÃO<span
+                  style="color: #161616;">.</span></h1>
+
+              <label class="mt-3" style="font-size: 22px; color: #BEBEBE;" for="name"><b>Nome</b></label>
+              <br>
+              <input class="form-control" type="text" placeholder="Digite seu Nome..." name="name" id="name" required>
+              <br>
+
+              <label for="email" style="font-size: 22px; color: #BEBEBE;"><b>Email</b></label>
+              <br>
+              <input class="form-control" type="text" placeholder="Digite seu Email..." name="email" id="email"
+                required>
+              <br>
+
+              <label for="cell" style="font-size: 22px; color: #BEBEBE;"><b>Celular</b></label>
+              <br>
+              <input class="form-control" type="tel" placeholder="Digite seu Celular..." name="cell" id="cell" required>
+
+              <div class="d-flex justify-content-center mt-3">
+                <button style="font-weight: bold; font-size: 20px; background-color: #FDA923; border: none;"
+                  type="submit" class="btn btn-primary">Enviar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!--Seção Mistério-->
+  <section id="Ministério">
+    <div class="container mt-7">
+      <div class="row flex-wrap">
+        <div class="col-sm-8 mt-4">
+          <h1 class="font-weight-bold mb-3">Ministério <br> Navegadores de Deus<span style="color: #FDA923;">.</span></h1>
+          <h5 class="apresentacao blockquote text-secondary mb-4 text-justify">Através dos cultos físicos e das mídias
+            digitais levamos pessoas ao conhecimento de Deus, visando sempre a mensagem da Cruz e de Jesus Cristo.</h5>
+            <button style=" border: #214CCE;" type="button " class="btn btn-primary mb-5">Saiba Mais</button>
+        </div>
+
+        <div class="hide-on-small-screen col-sm-4  mt-4  " style="width: 50%;">
+          <img class="img-fluid " src="local/cards/biblia.png " alt="Bíblia" style="width: 100%;">
+          <h6 class=" pt-2 pb-4 text-justify"><span class="text-secondary fs-6 fw-medium">Pois vocês são salvos pela
+              graça, por meio da fé, e isto não vem de vocês, é dom de Deus; não por obras, para que ninguém se
+              glorie.</span><br><span class="text-secondary fs-6 fw-medium">Efésios 2:8-9</span></h6>
+        </div>      
+      </div>
+    </div>
+  </section>
+
+  <!---Seção Cultos-->
+  <section id="cultos" class="py-5" style="background-color: #D9D9D9;">
+    <div class="container m-auto">
+      <div class="row justify-content-md-center pb-5">
+        <div class=" col-sm-6">
+          <div class="video embed-responsive embed-responsive-16by9 mt-5">
+            <iframe class=" justify-content-md-center embed-responsive-item"
+              src="https://www.youtube.com/embed/ABzDOSQkhTM"></iframe>
+          </div>
+        </div>
+
+        <div class="col-sm-6 mt-5">
+          <div>
+            <h1 class="font-weight-bold mb-3">Acompanhe nossos cultos<span style="color: #FDA923;">!</span></h1>
+            <p class=" py-2 text-justify">O nosso culto ocorre todos os Domingos das 9:00 às 10:30 presencialmente em
+              nossa igreja, localizada na Rua Ruy Barbosa no bairro Quintas do Picuaia, Lauro de Freitas - BA, MAS para
+              todos aqueles adoradores de Deus que não puderem estar presentes nesse dia, também disponibilizamos uma
+              gravação do culto em nosso canal do Youtube. Além disso, todas às quartas das 20:00 às 21:30 temos cultos
+              no Youtube para que você acompanhe ao vivo ou quando quiser.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Seção Agenda-->
+  <section class="jumbotron" id="big-banner">
+    <div class="container">    
+        <div class="">
+          <h1 class="text-center text-light fs-1 fw-semibold m-0 px-3 py-2">Agenda da Semana</h1>
+        </div>
+        <div class="mx-auto d-flex justify-content-center" id='calendar'></div>
+    </div>
+
+    <div id="eventoModal" class="modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" id="eventoModalBody">
+            <p>Modal body text goes here.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Projetos-->
+  <section id="projetos" class="pb-5 my-5">
+    <div class="pb-5 text-center">
+      <h1 class="text-dark font-weight-bolder">PROJETOS EVANGELÍSTICOS</h1>
+    </div>
+  
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card" id="card1">
+            <div class="card-side front bg-dark">
+              <h4 class="texto-card font-weight-bold" style="background-color: #161616;">CÉLULAS</h4>
+            </div>
+            <div class="card-side back">
+              <h3 class="text-dark">Reuniões semanais sobre alguns temas da Bíblia com o objetivo de gerar comunhão e aprendizado.</h3>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-4 mb-4">
+          <div class="card" id="card2">
+            <div class="card-side front bg-dark">
+              <h4 class="texto-card font-weight-bold" style="background-color: #161616;">ADORAÇÃO</h4>
+            </div>
+            <div class="card-side back">
+              <h3 class="text-dark">Momento de rendição ao Senhor através dos louvores (Música).</h3>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-4 mb-4">
+          <div class="card" id="card3">
+            <div class="card-side front bg-dark">
+              <h4 class="texto-card font-weight-bold" style="background-color: #161616;">ESTUDOS</h4>
+            </div>
+            <div class="card-side back">
+              <h3 class="text-dark">Ensinar aos cristãos os princípios básicos da fé cristã.</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card" id="card4">
+            <div class="card-side front bg-dark">
+              <h4 class="texto-card font-weight-bold" style="background-color: #161616;">JOGOS ONLINE</h4>
+            </div>
+            <div class="card-side back">
+              <h3 class="text-dark">Gerar relacionamento com pessoas por meio de jogos, visando alcançar um novo público.</h3>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-4 mb-4">
+          <div class="card" id="card5">
+            <div class="card-side front bg-dark">
+              <h4 class="texto-card font-weight-bold" style="background-color: #161616;">ESPORTES</h4>
+            </div>
+            <div class="card-side back">
+              <h3 class="text-dark">Gerar relacionamento com pessoas por meio de esportes, visando alcançar um novo público.</h3>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-4 mb-4">
+          <div class="card" id="card6">
+            <div class="card-side front bg-dark">
+              <h4 class="texto-card font-weight-bold" style="background-color: #161616;">EVENTOS DIVERSOS</h4>
+            </div>
+            <div class="card-side back">
+              <h3 class="text-dark">Festival de música, luau, cantata, culto de jovens, de mulheres, homens, crianças e etc...</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+<!---Radio-->
+<section id="radio" style="background-color: #FF9900;">
+  <div class="bg-dark p-2"></div>
+
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-12 col-md-4 d-flex align-items-center">
+        <img src="local/Icons/radio_FILL0_wght400_GRAD0_opsz24 1.png" alt="Radio Icon" class="img-fluid" style="max-width: 70px; max-height: 70px;">
+        <h1 class="ms-3  m-0 px-3 py-2 text-light">Escute Nossa Rádio</h1>
+      </div>
+    </div>
+    
+    <div class="row mt-5 pb-5">
+      <div class="col-12 col-md-6 d-flex align-items-center">
+        <img src="local/cards/logo-radio.png" alt="Navegadores" class="img-fluid" style="max-width: 100%;">
+      </div>
+
+      <div class="col-12 col-md-6 d-flex align-items-center">
+        <audio class="w-100 pt-3" id="plyr-audio-player" controls>
+          <source src="" type="audio/mp3" />
+        </audio>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!---Seção Galeria--->
+<section id="galeria" class="mb-5 py-5" style="background-color: #E9E9E9;">
+    <img src="local/cards/barcoavela 1.svg" class="img-fluid" alt="onda barco a vela" id="barcovela" style="width: 100%">
+    <h2 class="text-center fs-1 font-weight-bold m-0 px-3 py-2">NOSSA GALERIA</h2>
+    <br>
+
+      <div id="carouselExample" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="local/galeria/foto1.png" class="d-block w-50 mx-auto rounded" alt="Imagem 1">
+          </div>
+          <div class="carousel-item">
+            <img src="local/galeria/foto2.png" class="d-block w-50 mx-auto rounded" alt="Imagem 2">
+          </div>
+          <div class="carousel-item">
+            <img src="local/galeria/foto3.png" class="d-block w-50 mx-auto rounded" alt="Imagem 3">
+          </div>
+          <div class="carousel-item">
+            <img src="local/galeria/foto4.png" class="d-block w-50 mx-auto rounded" alt="Imagem 4">
+          </div>
+          <div class="carousel-item">
+            <img src="local/galeria/foto5.png" class="d-block w-50 mx-auto rounded" alt="Imagem 5">
+          </div>
+          <div class="carousel-item">
+            <img src="local/galeria/foto6.png" class="d-block w-50 mx-auto rounded" alt="Imagem 6">
+          </div>
+        </div>
+
+
+        <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only" style="color: #161616;">Anterior</span>
         </a>
-    
-        <!-- Botão de alternância para dispositivos móveis -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-    
-        <!-- Itens de navegação -->
-        <div class="collapse navbar-collapse " id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Agenda</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Projetos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Rádio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Galeria</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contato</a>
-            </li>
-            <button type="button" class="btn btn-warning">Inscreva-se</button>
-          </ul>
-        </div>
-      </div>
-    </nav>
+        <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Próximo</span>
+        </a>
+      </div>  
+</section>
 
-    <!--Seção Mistério-->
-    <section id="Ministério">
-        <div class="container mt-5 pt-4">
-            <div class="row">
-                <div class="col-sm-8 mt-4">
-                    <h1 class="font-weight-bold mb-3">Ministério <br> Navegadores de Deus<span style="color: #FDA923;">.</span></h1>
-                    <h5 class="text-secondary mb-4 text-justify" style="width: 75%">Através dos cultos físicos e das mídias digitais levamos pessoas ao conhecimento de Deus, visando sempre a mensagem da Cruz e de Jesus Cristo.</h6>
-                    <button type="button" class="btn btn-primary mb-5">Saiba Mais</button>
-                </div>
-
-                <div class="col-sm-4" style="width: 50%;">
-                  <img class="img-fluid " src="local/cards/biblia.png " alt="biblia" style="width: 100%;">
-                  <h6 class=" pt-2 pb-4 text-justify"><span class="text-secondary fs-6 fw-medium">Pois vocês são salvos pela graça, por meio da fé, e isto não vem de vocês, é dom de Deus; não por obras, para que ninguém se glorie.</span><br><span class="text-secondary fs-6 fw-medium">Efésios 2:8-9</span></h6>
-                <div>
-            </div>    
-        </div>
-    </section>
-
-    <!---Seção Cultos-->
-    <section id="cultos"style="background-color: #D9D9D9;">
-      <div class="container m-auto">
-        <div class="row">
-          <div class="col-sm-6">
-            <div class="embed-responsive embed-responsive-16by9 mt-5 mb-5" style="width:90%;">
-              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ABzDOSQkhTM"></iframe>
-            </div> 
+<!-- Seção Footer -->
+<section id="footer" class="mt-auto" style="background-color: #161616; position: relative;">
+  <div class="container py-5">
+      <div class="row py-5">
+          <div class="col-md-2 col-lg-2 mb-3">
+              <h5 class="text-light">Saiba Mais</h5>
+              <ul class="nav flex-column">
+                  <li class="list-item nav-item mb-2"><a class="nav-link p-0 text-muted">Sobre Ministério</a></li>
+                  <li class="list-item nav-item mb-2"><a class="nav-link p-0 text-muted">Projetos</a></li>
+                  <li class="list-item nav-item mb-2"><a class="nav-link p-0 text-muted">Calendário</a></li>
+                  <li class="list-item nav-item mb-2"><a class="nav-link p-0 text-muted">Rádio</a></li>
+              </ul>
           </div>
-
-          <div class="col-sm-6 mt-5">
-            <div>
-              <h1 class="font-weight-bold mb-3">Acompanhe nossos cultos<span style="color: #FDA923;">!</span></h1>
-              <p class=" py-2 text-justify">O nosso culto ocorre todos os Domingos das 9:00 às 10:30 presencialmente em nossa igreja, localizada  na Rua Ruy Barbosa no bairro Quintas do Picuaia, Lauro de Freitas - BA, MAS para todos aqueles adoradores de Deus que não puderem estar presentes nesse dia, também disponibilizamos uma gravação do culto em nosso canal do Youtube. Além disso, todas às quartas das 20:00 às 21:30 temos cultos no Youtube para que você acompanhe ao vivo ou quando quiser.</p>
-            </div>
+          <div class="col-md-4 col-lg-3 mb-3">
+              <h5 class="text-light">Contato</h5>
+              <ul class="nav flex-column">
+                  <li class="list-item nav-item mb-2"><a class="nav-link p-0 text-muted">ministerionavegadores<br>@gmail.com</a></li>
+                  <li class="list-item nav-item mb-2"><a class="nav-link p-0 text-muted">+55 (71) 999250 w-sm-75751</a></li>
+              </ul>
           </div>
-        </div>    
-      </div>
-    </section>
-
-     <!---Seção Agenda-->
-     <div class="container mt-5" id="background-img">
-       <div class="row">
-         <div class="col-md-12">
-          <h1 class="text-center text-light fs-1 fw-semibold font-family-Roboto  m-0 px-3 py-2">Agenda da Semana</h1>
-           <div id="calendar" class="mt-3"></div>
-           <div id="event-info" class="mt-3"></div>
-         </div>
-       </div>
-     </div>
-
-    <!--Seção projetos evangelisticos-->
-    <section id="Projetos">
-        <div class="container">
-          <h1 class="text-center text-light fs-1 fw-semibold font-family-Roboto m-0 px-3 py-2 my-5"><span
-              style="color: #000000;">Pojetos evangelísticos</span></h1>
-    
-          <div class="row galery">
-            <div class="col-4 d-flex justify-content-center">
-              <a href="local\cards\adoracao.png" class="d-block position-relative">
-                <img src="local\cards\adoracao.png" alt="" class="img-fluid minha-imagem">
-                <div
-              class="image-caption position-absolute bottom-0 start-0 ms-1">
-              Adoração
-            </div>
-  
-            <div
-                  class="hover-text position-absolute top-0 h-100 w-100 d-flex justify-content-center align-items-center text-center">
-                  Momento de rendição ao Senhor através dos louvores (Musica).
-                </div>
-              </a>
-            </div>
-    
-            <div class="col-4 d-flex justify-content-center">
-              <a href="local\cards\celula.png" class="d-block ">
-                <img src="local\cards\celula.png" alt="" class="img-fluid minha-imagem">
-                <div
-              class="image-caption position-absolute bottom-0 start-0 ms-1">
-              Células
-            </div>
-                <div
-                  class="hover-text position-absolute top-0 h-100 w-100 d-flex justify-content-center align-items-center text-center">
-                  Reuniões semanais sobre alguns temas da Biblia com o objetivo de gerar comunhão e aprendizado.
-                </div>
-              </a>
-            </div>
-    
-            <div class="col-4 d-flex justify-content-center">
-              <a href="local\cards\esportes.png" class="d-block position-relative">
-                <img src="local\cards\esportes.png" alt="" class="img-fluid minha-imagem">
-                <div
-              class="image-caption position-absolute bottom-0 start-0 ms-1">
-              Esportes
-            </div>
-                <div
-                  class="hover-text position-absolute top-0 h-100 w-100 d-flex justify-content-center align-items-center text-center">
-                  Gerar relacionamento com pessoas por meio de esportes, visando alcançar um novo público.
-                </div>
-              </a>
-            </div>
-    
-            <div class="col-4 d-flex justify-content-center">
-              <a href="local\cards\estudos.png" class="d-block position-relative my-5">
-                <img src="local\cards\estudos.png" alt="" class="img-fluid minha-imagem">
-                <div
-              class="image-caption position-absolute bottom-0 start-0 ms-1">
-              Estudos
-            </div>
-                <div
-                  class="hover-text position-absolute top-0 h-100 w-100 d-flex justify-content-center align-items-center text-center">
-                  Ensinar aos cristãos os principios básicos da fé cristâ.
-                </div>
-              </a>
-            </div>
-    
-            <div class="col-4 d-flex justify-content-center">
-              <a href="local\cards\eventos_diversos.png" class="d-block position-relative my-5">
-                <img src="local\cards\eventos_diversos.png" alt="" class="img-fluid minha-imagem">
-                <div
-              class="image-caption position-absolute bottom-0 start-0 ms-1">
-              Eventos diversos
-            </div>
-                <div
-                  class="hover-text position-absolute top-0 h-100 w-100 d-flex justify-content-center align-items-center text-center">
-                  Festival de música, luau, cantata, culto de jovens, de mulheres, homens, crianças e etc...
-                </div>
-              </a>
-            </div>
-    
-            <div class="col-4 d-flex justify-content-center">
-              <a href="local\cards\jogos_online.png" class="d-block position-relative my-5">
-                <img src="local\cards\jogos_online.png" alt="" class="img-fluid minha-imagem">
-                <div
-              class="image-caption position-absolute bottom-0 start-0 ms-1">
-              Jogos Online
-            </div>
-                <div
-                  class="hover-text position-absolute top-0 h-100 w-100 d-flex justify-content-center align-items-center text-center">
-                  Gerar relacionamento com pessoas por meio de jogos, visando alcançar um novo público.
-                </div>
-              </a>
-            </div>
+          <div class="col-md-4 col-lg-3 mb-3">
+              <h5 class="text-light">Endereço</h5>
+              <ul class="nav flex-column">
+                  <li class="list-item nav-item mb-2"><a class="nav-link p-0 text-muted">Navegadores de Deus</a></li>
+                  <li class="list-item nav-item mb-2"><a class="nav-link p-0 text-muted">Rua Ruy Barbosa no bairro Quintas do Picuaia, Lauro de Freitas - BA</a></li>
+              </ul>
           </div>
-        </div>
-    </section>
-    
-           
-    <!--Seção Radio-->
-    <section id="Radio">
-
-    </section>
-
-    <!---Seção Galeria-->
-    <section id="Galeira">
-
-    </section>
-
-      <!---Seção Footer-->
-      <section id="Fale-Conosco" style="background-color: #161616;">
-        <div class="container">
-          <footer class="py-5">
-            <div class="row">
-              <div class="col-2 mb-5">
-                <h5 class="text-light">Saiba Mais</h5>
-                <ul class="nav flex-column">
-                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Sobre Ministério</a></li>
-                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Projetos</a></li>
-                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Calendário</a></li>
-                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Rádio</a></li>
-                </ul>
-              </div>
-        
-              <div class="col-3">
-                <h5 class="text-light">Contato</h5>
-                <ul class="nav flex-column">
-                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">ministerionavegadores@gmail.com</a></li>
-                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">+55 (71) 999225751</a></li>
-              </div>
-        
-              <div class="col-3">
-                <h5 class="text-light">Endereço</h5>
-                <ul class="nav flex-column">
-                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Navegadores de Deus</a></li>
-                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Rua Ruy Barbosa no bairro Quintas do Picuaia, Lauro de Freitas - BA</a></li>
-                </ul>
-              </div>
-        
-              <div class="col-4">
-                <form>
+          <div class="col-sm">
+              <form>
                   <h5 class="text-light">Assine a Nossa Newsletter</h5>
                   <p class="text-muted">Resumo mensal do que há de novo e interessante sobre nós.</p>
-                  <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-                    <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
-                    <button class="btn btn-warning" type="button">Inscreva-se</button>
+                  <div class="input-group mb-3">
+                      <input type="text" class="form-control" placeholder="Email" aria-label="Recipient's username" aria-describedby="button-addon2">
+                      <div class="input-group-append">
+                          <button style="background-color: #FF9900; border-color: #FF9900;" class="btn btn-outline-secondary text-dark" type="button" id="button-addon2">Assinar</button>
+                      </div>
                   </div>
-                </form>
-              </div>
-            </div>
+              </form>
+          </div>
+      </div>
 
-            <div class="d-flex flex-column flex-sm-row justify-content-center border-top">
-              <div class="row">
-                <div class="d-flex justify-content-center">
-                  <ul class="list-unstyled d-flex mt-3">
-                    <li class="mr-3">
-                      <a href="#" target="_blank">
-                        <img src="local/logos/youtube.svg" alt="youotube" width="30" height="30">
-                      </a>
-                    </li>
-                    <li class="mr-3">
-                      <a href="#" target="_blank">
-                        <img src="local/logos/twitch.svg" alt="Twitch" width="30" height="30">
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" target="_blank">
-                        <img src="local/logos/instagram.svg" alt="Instagram" width="30" height="30">
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
 
-            <div class="d-flex justify-content-center">
-            <p class="text-muted">© 2023 Navegadores de Deus. Todos os direitos reservados.</p>
-            </div>
-
-          </footer>
+      <div class="d-flex flex-column flex-sm-row justify-content-center border-top mt-3 center-icons">
+        <div class="">
+           <div class="d-flex justify-content-center">
+              <ul class="list-unstyled d-flex mt-3">
+                 <li class="mr-3">
+                    <a href="#" target="_blank">
+                       <img src="local/logos/youtube.svg" alt="YouTube" width="30" height="30">
+                    </a>
+                 </li>
+                 <li class="mr-3">
+                    <a href="#" target="_blank">
+                       <img src="local/logos/twitch.svg" alt="Twitch" width="30" height="30">
+                    </a>
+                 </li>
+                 <li>
+                    <a href="#" target="_blank">
+                       <img src="local/logos/instagram.svg" alt="Instagram" width="30" height="30">
+                    </a>
+                 </li>
+              </ul>
+           </div>   
         </div>
-      </section>
+      </div>
+  </div>
+     
 
-    <!-- JavaScript (Opcional) -->
-    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-      crossorigin="anonymous"></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-      crossorigin="anonymous"></script>
-  </body>
+
+    <div class="d-flex justify-content-center mt-3">
+          <p class="text-muted  text-center">© 2023 Navegadores de Deus. Todos os direitos reservados.</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
+</body>
+
 </html>
