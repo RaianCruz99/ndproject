@@ -11,12 +11,10 @@
   <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
   <link rel="stylesheet" href="style.css">
   <script src="agenda.js"></script>
+  <script src="script.js"></script>
 
-  <link rel="stylesheet" href="assets/vendor/libs/plyr/plyr.css" />
-  <script src="assets/vendor/libs/plyr/plyr.js"></script>
-
-
-
+  
+  <!---Calendar-lib-->>
   <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/locales/pt-br.js"></script>
   <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
   <link href='https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.1/css/all.css' rel='stylesheet'>
@@ -40,94 +38,98 @@
       </button>
 
       <!-- Itens de navegação -->
-      <div class="collapse navbar-collapse " id="navbarResponsive">
+      <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item border-right ">
-            <a class="nav-link mr-2 " style="color: #E9E9E9; " href="#agenda">Agenda</a>
+          <li class="nav-item">
+            <a class="nav-link" style="color: #E9E9E9;" href="#agenda">Agenda</a>
           </li>
-          <li class="nav-item border-right ">
-            <a class="nav-link mr-2 " style="color: #E9E9E9;" href="#projetos">Projetos</a>
+          <li class="nav-item">
+            <a class="nav-link" style="color: #E9E9E9;" href="#projetos">Projetos</a>
           </li>
-          <li class="nav-item border-right">
-            <a class="nav-link mr-2 " style="color: #E9E9E9;" href="#radio">Rádio</a>
+          <li class="nav-item">
+            <a class="nav-link" style="color: #E9E9E9;" href="#radio">Rádio</a>
           </li>
-          <li class="nav-item border-right">
-            <a class="nav-link  mr-2 " style="color: #E9E9E9;" href="#galeria">Galeria</a>
+          <li class="nav-item">
+            <a class="nav-link" style="color: #E9E9E9;" href="#galeria">Galeria</a>
           </li>
-          <li class="nav-item border-right">
-            <a class="nav-link mr-2 " style="color: #E9E9E9;" href="#footer">Contato</a>
+          <li class="nav-item">
+            <a class="nav-link" style="color: #E9E9E9;" href="#footer">Contato</a>
           </li>
-          <button id="inscricao" style="font-weight: bolder;" type="button" class="btn btn-warning">INSCREVA-SE</button>
+          <li class="nav-item">
+            <button id="inscricao" style="font-weight: bolder;" type="button" class="btn btn-warning">INSCREVA-SE</button>
+          </li>
         </ul>
       </div>
-    </div>
+      
   </nav>
 
 
-  <!---Seção Modal Inscreva-se-->
-  <!-- O Modal -->
-  <div id="myModal" class="modal">
+<!---Seção Modal Inscreva-se-->
+<!-- O Modal -->
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content" style="height: 110%; height: auto;">
+    <span class="close" onclick="fecharModal()">&times;</span>
 
-    <!-- Modal content -->
-    <div class="modal-content">
-      <span class="close">&times;</span>
+    <div class="caixainscricao d-flex flex-column flex-md-row bd-highlight">
 
-      <div class="caixainscricao d-flex flex-column flex-md-row bd-highlight">
-
-        <div class="info hi p-2 flex-fill bd-highlight">
-          <div class="imagem-com-texto">
-            <img class="retangulos" src="local/Icons/retangulos.svg" alt="">
-            <h1 class="modaltitulo font-weight-bold mt-n3">Ministério <br> Navegadores de Deus<span
-                style="color: #FDA923;">.</span></h1>
-          </div>
-
-          <div class="d-none d-md-block">
-            <h3 class="mt-8 ml-6 " style="color: #161616; font-weight: bold;">Localização</h3>
-            <p class="text-secondary mt-4 ml-6" style="color: #BEBEBE;">Rua Ruy Barbosa no Bairro Quintas do Picuaia,
-              <br>Lauro de Freitas -BA
-            </p>
-            <h3 class="mt-6 ml-6" style="color: #161616; font-weight: bold;">Siga-nos</h3>
-            <div class="mt-3 ml-6">
-              <img class="ml-3" src="local/Icons/vector.svg" alt="yotube">
-              <img class="ml-3" src="local/Icons/instagram.svg" alt="instagram">
-              <img class="ml-3" src="local/Icons/twitch.svg" alt="twitch">
-            </div>
-            <h6 class="mt-4 ml-6" style="font-size: 15px;">© 2023 Política de Privacidade</h6>
-          </div>
+      <div class="info hi p-2 flex-fill bd-highlight">
+        <div class="imagem-com-texto">
+          <img class="retangulos" src="local/Icons/retangulos.svg" alt="">
+          <h1 class="modaltitulo font-weight-bold mt-n3">Ministério <br> Navegadores de Deus<span
+              style="color: #FDA923;">.</span></h1>
         </div>
 
-        <div class="formulario p-2 flex-fill bd-highlight">
-          <form action="action_page.php">
-            <div class="cont mb-2">
-              <h1 class="mt-8" style=" font-weight: bold; color: #FDA923;">INSCRIÇÃO<span
-                  style="color: #161616;">.</span></h1>
-
-              <label class="mt-3" style="font-size: 22px; color: #BEBEBE;" for="name"><b>Nome</b></label>
-              <br>
-              <input class="form-control" type="text" placeholder="Digite seu Nome..." name="name" id="name" required>
-              <br>
-
-              <label for="email" style="font-size: 22px; color: #BEBEBE;"><b>Email</b></label>
-              <br>
-              <input class="form-control" type="text" placeholder="Digite seu Email..." name="email" id="email"
-                required>
-              <br>
-
-              <label for="cell" style="font-size: 22px; color: #BEBEBE;"><b>Celular</b></label>
-              <br>
-              <input class="form-control" type="tel" placeholder="Digite seu Celular..." name="cell" id="cell" required>
-
-              <div class="d-flex justify-content-center mt-3">
-                <button style="font-weight: bold; font-size: 20px; background-color: #FDA923; border: none;"
-                  type="submit" class="btn btn-primary">Enviar</button>
-              </div>
-            </div>
-          </form>
+        <div class="d-none d-md-block">
+          <h3 class="mt-7 ml-6 " style="color: #161616; font-weight: bold;">Localização</h3>
+          <p class="text-secondary mt-2 ml-6" style="color: #BEBEBE;">Rua Ruy Barbosa no Bairro Quintas do Picuaia,
+            <br>Lauro de Freitas -BA
+          </p>
+          <h3 class="mt-3 ml-6" style="color: #161616; font-weight: bold;">Siga-nos</h3>
+          <div class="mt-3 ml-6">
+            <img class="ml-2" src="local/Icons/vector.svg" alt="yotube">
+            <img class="ml-2" src="local/Icons/instagram.svg" alt="instagram">
+            <img class="ml-" src="local/Icons/twitch.svg" alt="twitch">
+          </div>
+          <h6 class="mt-4 ml-6" style="font-size: 15px;">© 2023 Política de Privacidade</h6>
         </div>
       </div>
-    </div>
+                <div class="formulario p-2 flex-fill bd-highlight">
+                  <form action="action_page.php">
+                    <div class="cont mb-2">
+                      <h1 class="mt-8" style=" font-weight: bold; color: #FDA923;">INSCRIÇÃO<span
+                          style="color: #161616;">.</span></h1>
 
+                      <label class="mt-3" style="font-size: 22px; color: #BEBEBE;" for="name"><b>Nome</b></label>
+                      <br>
+                      <input class="form-control" type="text" placeholder="Digite seu Nome..." name="name" id="name" required>
+                      <br>
+
+                      <label for="email" style="font-size: 22px; color: #BEBEBE;"><b>Email</b></label>
+                      <br>
+                      <input class="form-control" type="text" placeholder="Digite seu Email..." name="email" id="email"
+                        required>
+                      <br>
+
+                      <label for="cell" style="font-size: 22px; color: #BEBEBE;"><b>Celular</b></label>
+                      <br>
+                      <input class="form-control" type="tel" placeholder="Digite seu Celular..." name="cell" id="cell" required>
+
+                      <div class="d-flex justify-content-center mt-3">
+                        <button style="font-weight: bold; font-size: 20px; background-color: #FDA923; border: none;"
+                          type="submit" class="btn btn-primary">Enviar</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                      <!-- Balãozinho de confirmação -->
+        <div id="balao-confirmacao" class="alert alert-success" style="display: none;">
+          Formulário enviado com sucesso!
+        </div>
+
+    </div>
   </div>
+</div>
 
   <!--Seção Mistério-->
   <section id="Ministério">
@@ -137,7 +139,7 @@
           <h1 class="font-weight-bold mb-3">Ministério <br> Navegadores de Deus<span style="color: #FDA923;">.</span></h1>
           <h5 class="apresentacao blockquote text-secondary mb-4 text-justify">Através dos cultos físicos e das mídias
             digitais levamos pessoas ao conhecimento de Deus, visando sempre a mensagem da Cruz e de Jesus Cristo.</h5>
-            <button style=" border: #214CCE;" type="button " class="btn btn-primary mb-5">Saiba Mais</button>
+            <button style=" border: #214CCE; background-color:#214CCE;" type="button " class="btn btn-primary mb-5">Saiba Mais</button>
         </div>
 
         <div class="hide-on-small-screen col-sm-4  mt-4  " style="width: 50%;">

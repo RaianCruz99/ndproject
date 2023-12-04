@@ -395,3 +395,31 @@ ul {
 .card:hover .card-side.back {
   transform: rotateY(0deg);
 }
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000; /* Um valor alto o suficiente */
+}
+
+.newsletter-form {
+  z-index: 999; /* Um valor menor que o z-index do modal */
+}
+
+@media (max-width: 767px) {
+  .modal-content {
+    width: 100%;
+    max-width: none; /* Certifique-se de que a largura máxima seja removida para ocupar 100% */
+  }
+}
+
+.navbar-nav li {
+  padding: 10px;
+  transition: background-color 0.3s;
+}
+
+.navbar-nav a:hover {
+  background-color: #333; /* Cor de destaque ao passar o mouse */
+}
