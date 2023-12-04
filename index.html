@@ -43,19 +43,19 @@
       <div class="collapse navbar-collapse " id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item border-right ">
-            <a class="nav-link mr-2 " style="color: #E9E9E9; " href="#Agenda">Agenda</a>
+            <a class="nav-link mr-2 " style="color: #E9E9E9; " href="#agenda">Agenda</a>
           </li>
           <li class="nav-item border-right ">
-            <a class="nav-link mr-2 " style="color: #E9E9E9;" href="#Projetos">Projetos</a>
+            <a class="nav-link mr-2 " style="color: #E9E9E9;" href="#projetos">Projetos</a>
           </li>
           <li class="nav-item border-right">
-            <a class="nav-link mr-2 " style="color: #E9E9E9;" href="#Radio">Rádio</a>
+            <a class="nav-link mr-2 " style="color: #E9E9E9;" href="#radio">Rádio</a>
           </li>
           <li class="nav-item border-right">
-            <a class="nav-link  mr-2 " style="color: #E9E9E9;" href="#Galeria">Galeria</a>
+            <a class="nav-link  mr-2 " style="color: #E9E9E9;" href="#galeria">Galeria</a>
           </li>
           <li class="nav-item border-right">
-            <a class="nav-link mr-2 " style="color: #E9E9E9;" href="#Fale-Conosco">Contato</a>
+            <a class="nav-link mr-2 " style="color: #E9E9E9;" href="#footer">Contato</a>
           </li>
           <button id="inscricao" style="font-weight: bolder;" type="button" class="btn btn-warning">INSCREVA-SE</button>
         </ul>
@@ -176,34 +176,10 @@
   </section>
 
   <!--Seção Agenda-->
-  <section class="jumbotron" id="big-banner">
-    <div class="container">    
-        <div class="">
-          <h1 class="text-center text-light fs-1 fw-semibold m-0 px-3 py-2">Agenda da Semana</h1>
-        </div>
-        <div class="mx-auto d-flex justify-content-center" id='calendar'></div>
-    </div>
-
-    <div id="eventoModal" class="modal" tabindex="-1" role="dialog">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Modal title</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body" id="eventoModalBody">
-            <p>Modal body text goes here.</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary">Save changes</button>
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<section class="jumbotron" id="big-banner">
+  <div id="agenda" class="container"><h1 class="text-center text-light fs-1 fw-semibold m-0 px-3 py-2">Agenda da Semana</h1></div>
+  <div class="mx-auto d-flex justify-content-center" id='calendar'></div>
+</section>
 
   <!--Projetos-->
   <section id="projetos" class="pb-5 my-5">
@@ -315,6 +291,7 @@
 
 <!---Seção Galeria--->
 <section id="galeria" class="mb-5 py-5" style="background-color: #E9E9E9;">
+    <div id="bg-fotos" class="bg-warning"></div>
     <img src="local/cards/barcoavela 1.svg" class="img-fluid" alt="onda barco a vela" id="barcovela" style="width: 100%">
     <h2 class="text-center fs-1 font-weight-bold m-0 px-3 py-2">NOSSA GALERIA</h2>
     <br>
@@ -370,7 +347,7 @@
               <h5 class="text-light">Contato</h5>
               <ul class="nav flex-column">
                   <li class="list-item nav-item mb-2"><a class="nav-link p-0 text-muted">ministerionavegadores<br>@gmail.com</a></li>
-                  <li class="list-item nav-item mb-2"><a class="nav-link p-0 text-muted">+55 (71) 999250 w-sm-75751</a></li>
+                  <li class="list-item nav-item mb-2"><a class="nav-link p-0 text-muted">+55 (71) 99925-7575</a></li>
               </ul>
           </div>
           <div class="col-md-4 col-lg-3 mb-3">
